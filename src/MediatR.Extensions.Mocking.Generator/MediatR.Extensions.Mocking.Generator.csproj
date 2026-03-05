@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>14</LangVersion>
+        <Nullable>enable</Nullable>
+        <IsRoslynComponent>true</IsRoslynComponent>
+        <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+        <!-- RS1041: Intentionally targeting net6.0 for C# 14 features (extension keyword, collection expressions) -->
+        <NoWarn>$(NoWarn);RS1041</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>MediatR.Extensions.Mocking.Generator</PackageId>
+        <Description>Roslyn source generator that creates strongly-typed mock registration APIs for MediatR. Generates fluent configuration like c.MockRegistration.Orders.PlaceOrder.WithReturnValue(...).</Description>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers"/>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\.editorconfig" Link=".editorconfig"/>
+    </ItemGroup>
+
+    <!-- Shared source files for generator-internal code -->
+    <ItemGroup>
+        <Compile Include="..\Shared\GroupHierarchyHelper.cs" Link="Shared\GroupHierarchyHelper.cs" />
+        <Compile Include="..\Shared\MediatorRequestDiscovery.cs" Link="Shared\MediatorRequestDiscovery.cs" />
+    </ItemGroup>
+
+    <!-- Include the generator DLL in the NuGet package -->
+    <ItemGroup>
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    </ItemGroup>
+
+</Project>

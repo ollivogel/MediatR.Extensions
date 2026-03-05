@@ -1,0 +1,14 @@
+<Project>
+    <PropertyGroup>
+        <Version>0.9.1</Version>
+        <IsPackable>true</IsPackable>
+        <Authors>Oliver Vogel</Authors>
+        <Copyright>Copyright (c) 2026 Oliver Vogel</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>MediatR;CQRS;source-generator;mocking;testing</PackageTags>
+        <RepositoryType>git</RepositoryType>
+        <!-- TODO: Set after GitHub repo is created -->
+        <!-- <RepositoryUrl>https://github.com/OWNER/MediatR.Extensions</RepositoryUrl> -->
+        <!-- <PackageProjectUrl>https://github.com/OWNER/MediatR.Extensions</PackageProjectUrl> -->
+    </PropertyGroup>
+</Project>

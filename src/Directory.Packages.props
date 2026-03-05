@@ -1,0 +1,34 @@
+<Project>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
+    </PropertyGroup>
+    <ItemGroup>
+        <!-- Build -->
+        <PackageVersion Include="Nuke.Common" Version="9.0.4"/>
+
+        <!-- Core -->
+        <PackageVersion Include="MediatR" Version="12.5.0"/>
+        <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageVersion>
+        <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0"/>
+        <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0"/>
+
+        <!-- Source Generators -->
+        <PackageVersion Include="Microsoft.CodeAnalysis.Common" Version="4.11.0" PrivateAssets="all" />
+        <PackageVersion Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0" PrivateAssets="all" />
+        <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.11.0" PrivateAssets="all" />
+        <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.11.0" PrivateAssets="all"/>
+        <PackageVersion Include="Microsoft.CodeAnalysis.Workspaces.Common" Version="4.11.0" PrivateAssets="all"/>
+
+        <!-- Testing -->
+        <PackageVersion Include="Microsoft.TestPlatform.TestHost" Version="18.0.1"/>
+        <PackageVersion Include="coverlet.collector" Version="6.0.4"/>
+        <PackageVersion Include="JunitXml.TestLogger" Version="7.0.2"/>
+        <PackageVersion Include="FluentAssertions" Version="6.12.0"/>
+        <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1"/>
+        <PackageVersion Include="xunit" Version="2.9.3"/>
+        <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5"/>
+    </ItemGroup>
+</Project>

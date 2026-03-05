@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>14</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>MediatR.Extensions.Common</PackageId>
+        <Description>Shared attributes ([MediatorGroup], [FacadeParameter], [GenerateFluentBuilder], [BuilderMethod]) for MediatR.Extensions source generators.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\.editorconfig" Link=".editorconfig"/>
+    </ItemGroup>
+
+</Project>

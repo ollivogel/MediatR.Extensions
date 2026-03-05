@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.TestPlatform.TestHost"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions"/>
+        <PackageReference Include="coverlet.collector">
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="JunitXml.TestLogger"/>
+        <PackageReference Include="MediatR"/>
+        <PackageReference Include="FluentAssertions"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk"/>
+        <PackageReference Include="xunit"/>
+        <PackageReference Include="xunit.runner.visualstudio">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\.editorconfig" Link=".editorconfig"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\MediatR.Extensions.Common\MediatR.Extensions.Common.csproj"/>
+        <ProjectReference Include="..\..\MediatR.Extensions.Facade\MediatR.Extensions.Facade.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+        <ProjectReference Include="..\..\MediatR.Extensions.FluentBuilder\MediatR.Extensions.FluentBuilder.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+        <ProjectReference Include="..\..\MediatR.Extensions.Mocking.Generator\MediatR.Extensions.Mocking.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+        <ProjectReference Include="..\Samples\Samples.csproj"/>
+        <ProjectReference Include="..\..\MediatR.Extensions.Mocking\MediatR.Extensions.Mocking.csproj"/>
+    </ItemGroup>
+
+</Project>

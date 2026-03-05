@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/build/">
+    <Project Path="build/_build.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/Samples.Facade/Samples.Facade.csproj" />
+    <Project Path="samples/Samples.FluentBuilder/Samples.FluentBuilder.csproj" />
+    <Project Path="samples/Samples.Tests/Samples.Tests.csproj" />
+    <Project Path="samples/Samples/Samples.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MediatR.Extensions.Generator.Tests/MediatR.Extensions.Generator.Tests.csproj" />
+  </Folder>
+  <Project Path="MediatR.Extensions.Common/MediatR.Extensions.Common.csproj" />
+  <Project Path="MediatR.Extensions.Facade/MediatR.Extensions.Facade.csproj" />
+  <Project Path="MediatR.Extensions.FluentBuilder/MediatR.Extensions.FluentBuilder.csproj" />
+  <Project Path="MediatR.Extensions.Mocking.Generator/MediatR.Extensions.Mocking.Generator.csproj" />
+  <Project Path="MediatR.Extensions.Mocking/MediatR.Extensions.Mocking.csproj" />
+</Solution>

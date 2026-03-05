@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.TestPlatform.TestHost"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection"/>
+        <PackageReference Include="MediatR"/>
+        <PackageReference Include="FluentAssertions"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk"/>
+        <PackageReference Include="xunit"/>
+        <PackageReference Include="xunit.runner.visualstudio">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\.editorconfig" Link=".editorconfig"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Reference the Samples assembly that contains our request/handler definitions -->
+        <ProjectReference Include="..\Samples\Samples.csproj"/>
+
+        <!-- The FluentBuilder generator: generates chainable builder APIs for requests -->
+        <ProjectReference Include="..\..\MediatR.Extensions.FluentBuilder\MediatR.Extensions.FluentBuilder.csproj"
+                          OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+
+        <!-- Abstractions: provides [GenerateFluentBuilder], [BuilderMethod], etc. -->
+        <ProjectReference Include="..\..\MediatR.Extensions.Common\MediatR.Extensions.Common.csproj"/>
+    </ItemGroup>
+
+</Project>
