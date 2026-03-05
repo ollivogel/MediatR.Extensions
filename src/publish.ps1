@@ -37,7 +37,7 @@ function Get-NextVersion {
         (git rev-parse --abbrev-ref HEAD 2>$null).Trim()
     }
 
-    if ($branch -in @("main", "master", "fresh-start")) {
+    if ($branch -in @("main", "master")) {
         $label = if ($IncrementMinor) { "minor increment" } else { "patch increment" }
         Write-Host "Next version: $baseVersion ($label)" -ForegroundColor Green
         return $baseVersion
